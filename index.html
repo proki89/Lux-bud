@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link href="/css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" media='screen and (min-width: 576px)' href="./css/small.css">
+    <link rel="stylesheet" media='screen and (min-width: 768px)' href="./css/medium.css">
+    <link rel="stylesheet" media='screen and (min-width: 992px)' href="./css/large.css">
+    <link rel="stylesheet" media='screen and (min-width: 1200px)' href="./css/x-large.css">
+
+    <link rel="stylesheet" media='screen and (min-width: 1400px)' href="./css/xx-large.css">
+
+    <script src="https://kit.fontawesome.com/c9d199cd34.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><span class="icon-logo"><i
+                        class="fas fa-paint-roller"></i></span></i>Lux-bud</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#about">O nas</a>
+                    <a class="nav-link" href="#">Realizacje</a>
+                    <a class="nav-link" href="#">Kontakt</a>
+
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header id="home">
+
+        <div class="header-wrapper d-flex row">
+            <div class="header-left col-md-6">
+                <div class="hero-shadow"></div>
+
+                <div class="left-text justify-content-center align-items-center visibility os-animation"
+                    data-animation="fadeIn" data-delay=".3s">
+                    <p class="text-center display-5 mb-0 os-animation" data-animation="fadeIn" data-delay=".3s"><i
+                            class="fas fa-hard-hat"></i></p>
+                    <h1 class="d-flex justify-content-center align-items-center display-1 text-uppercase os-animation"
+                        data-animation="fadeIn" data-delay=".3s">lux-bud</h1>
+
+                    <p class="d-flex justify-content-center align-items-center text-uppercase display-6 text-center under-title os-animation"
+                        data-animation="fadeIn" data-delay=".5s">
+                        Profesjonalne usługi remontowo-budowlane.</p>
+                    <p class="text-center display-6"><i class="fas fa-tools"></i></p>
+                    <div class="d-grid gap-2 col-6 col-md-4 mx-auto pt-3 os-animation" data-animation="fadeIn"
+                        data-delay=".9s">
+                        <a class="btn btn-primary rounded-pill" href="#about" role="button">Poznaj nas!</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="header-right col-md-6">
+
+                <div class="top-header-right position-absolute">
+                    <img src="/img/img-top-2.jpg" alt="">
+                </div>
+                <div class="right-header-mid position-absolute">
+                    <h3 class="text-center">Witaj!</h3>
+                </div>
+
+                <!-- <div class="rating-container">
+
+
+                        <div class="rating-hero">
+                            <div class="second-shadow"></div>
+
+                            <div class="top-left">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam neque necessitatibus
+                                veritatis earum adipisci consequuntur id assumenda possimus eligendi aliquam. Et dolorum
+                                consequuntur quibusdam quisquam amet assumenda similique molestias omnis.</p>
+
+
+                            <div class="top-right justify-content-end align-items-end">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                        </div>
+
+
+
+
+                    </div> -->
+
+
+
+                <!-- <div class="justify-content-center align-items-center">
+                        <p class="text-center display-6"><i class="fas fa-tools"></i></p>
+                        <p
+                            class="d-flex justify-content-center align-items-center text-uppercase display-6 text-center under-title wrapper">
+                            Świadczymy usługi z zakresu prac wykończeniowych, remontowych i budowlanych na terenie Lubina i okolic</p>
+                            <div class="d-grid gap-2 col-3 mx-auto pt-5">
+                                <button class="btn btn-primary" type="button">Dowiedz się więcej</button>
+                                
+                              </div>
+
+                    </div> -->
+                <!-- <div class="col-sm-4">
+                        <p class="text-center"><i class="fas fa-hat-wizard    "></i></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde cum repellat laboriosam! Quisquam sed eum itaque perspiciatis beatae officia dolorum voluptatum molestias tempora odio nisi debitis in, qui deserunt.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="text-center"><i class="fas fa-hat-wizard    "></i></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde cum repellat laboriosam! Quisquam sed eum itaque perspiciatis beatae officia dolorum voluptatum molestias tempora odio nisi debitis in, qui deserunt.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="text-center"><i class="fas fa-hat-wizard    "></i></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatem dolorum ad tempora adipisci quisquam amet soluta eum fugit ipsum iure eligendi error quis commodi natus, ea aperiam, quaerat incidunt.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="text-center"><i class="fas fa-hat-wizard    "></i></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatem dolorum ad tempora adipisci quisquam amet soluta eum fugit ipsum iure eligendi error quis commodi natus, ea aperiam, quaerat incidunt.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="text-center"><i class="fas fa-hat-wizard    "></i></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatem dolorum ad tempora adipisci quisquam amet soluta eum fugit ipsum iure eligendi error quis commodi natus, ea aperiam, quaerat incidunt.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="text-center"><i class="fas fa-hat-wizard    "></i></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatem dolorum ad tempora adipisci quisquam amet soluta eum fugit ipsum iure eligendi error quis commodi natus, ea aperiam, quaerat incidunt.</p>
+                    </div> -->
+            </div>
+
+
+    </header>
+
+    <section id="about">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="about-hero">
+                <div class="about-shadow"></div>
+                <h1 class="text-start pt-4 text-white"></h1>
+
+                <div class="about-container d-flex row justify-content-center wrapper pt-5">
+                    <div class="col-sm-6 col-md-4 col-lg-2 justify-content-center visibility os-animation"
+                        data-animation="bounceIn" data-delay=".3s">
+                        <p class="text-center"><i class="fas fa-hard-hat"></i></p>
+                        <h5 class="text-center">Profesjonalizm</h5>
+                        <p class="text-center about-desc">Wieloletnie doświadczenie i setki realizacji czynią z nas
+                            grupę godną zaufania.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-2 pb-5 visibility os-animation" data-animation="bounceIn"
+                        data-delay=".5s">
+                        <p class="text-center"><i class="far fa-clock"></i></p>
+                        <h5 class="text-center">Punktualność</h5>
+                        <p class="text-center about-desc">Wszystkim zależy na czasie, dlatego naszym priorytetem jest
+                            ustalenie realnego terminu zakończenia prac w porozumieniu z klientem.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-2 visibility os-animation" data-animation="bounceIn"
+                        data-delay=".7s">
+                        <p class="text-center"><i class="fas fa-expand-arrows-alt"></i></p>
+                        <h5 class="text-center">Wszechstronność</h5>
+                        <p class="text-center about-desc">Od drobnych napraw, do wykończenia całych domów. Cechuje nas
+                            duża wiedza i umiejętności w zakresie prac remontowo-budowlanych.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-2 visibility os-animation" data-animation="bounceIn"
+                        data-delay=".9s">
+                        <p class="text-center"><i class="far fa-calendar-alt"></i></p>
+                        <h5 class="text-center">Dostępne terminy</h5>
+                        <p class="text-center about-desc">Potrzebujesz szybkiej naprawy, albo masz inne pilne zlecenie?
+                            Skontaktuj się z nami, na pewno postaramy się pomóc jak najszybciej!</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-2 visibility os-animation" data-animation="bounceIn"
+                        data-delay="1.1s">
+                        <p class="text-center"><i class="fas fa-phone"></i></p>
+                        <h5 class="text-center">Kontakt</h5>
+                        <p class="text-center about-desc">Zależy nam na realizacji prac zgodnie z oczekiwaniami naszych
+                            klientów, więc jesteśmy z nimi zawsze w kontakcie.</p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <!-- ZAKRES PRAC 
+            <h1 class="text-center pt-4 page-title">ZAKRES PRAC</h1>
+
+            <div class="about-bot d-flex wrapper row">
+                <div class="col-12 col-md-4">
+                    <div class="about-card my-4 mx-2 shadow-sm position-relative">
+                        <div class="about-card-top">
+                            <div class="bubbles">
+                                <div class="bubble position-absolute top-0 start-0 translate-middle"></div>
+                                <div class="bubble position-absolute top-0 start-100 translate-middle"></div>
+                                <div class="bubble position-absolute top-100 start-100 translate-middle"></div>
+                                <div class="bubble position-absolute top-100 start-0 translate-middle"></div>
+                            </div>
+                            <p class="text-center p-2"><i class="fas fa-pencil-alt"></i>Remont, modernizacja lub
+                                wykonanie nowych elementów w lokalu mieszkalnym</p>
+                        </div>
+                        <div class="about-card-content ">
+                            <p class="text-center hydro"><i class="fas fa-paint-roller"></i></p>
+                            <ul class="list-group-item-s">
+                                <li>ścianek działowych, sufitów, tynków i okładzin wewnętrznych</li>
+                                <li>podłóg i posadzek</li>
+                                <li>okien, świetlików i drzwi</li>
+                                <li>powłok malarskich i tapet</li>
+                                <li>elementów kowalsko-ślusarskich</li>
+                                <li>izolacji przeciwwodnych, przeciwwilgociowych, dźwiękochłonnych i cieplnych</li>
+                            </ul>
+                        </div>
+                        <div class="bottom-card position-absolute bottom-0 start-50 translate-middle-x">
+                            <hr class="wrapper">
+                            <p class="text-muted text-center">Lorem ipsum dolor sit amet.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right-card d-none d-md-flex col-md-8 my-4 shadow-sm position-relative">
+
+                    <div class="bubbles">
+                        <div class="bubble position-absolute top-0 start-0 translate-middle"></div>
+                        <div class="bubble position-absolute top-0 start-100 translate-middle"></div>
+                        <div class="bubble position-absolute top-100 start-100 translate-middle"></div>
+                        <div class="bubble position-absolute top-100 start-0 translate-middle"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="about-bot d-flex wrapper row">
+                <div class="col-12 col-md-4">
+                    <div class="about-card my-4 mx-2 shadow-sm position-relative">
+                        <div class="about-card-top">
+                            <div class="bubbles">
+                                <div class="bubble position-absolute top-0 start-0 translate-middle"></div>
+                                <div class="bubble position-absolute top-0 start-100 translate-middle"></div>
+                                <div class="bubble position-absolute top-100 start-100 translate-middle"></div>
+                                <div class="bubble position-absolute top-100 start-0 translate-middle"></div>
+                            </div>
+                            <p class="text-center p-2"><i class="fas fa-pencil-alt"></i>Remont, modernizacja, wymiana
+                                lub wykonanie instalacji oraz montaż trwale umiejscowionych: wyposażenia, armatury i
+                                urządzeń dotyczących:</p>
+                        </div>
+                        <div class="about-card-content ">
+                            <p class="text-center hydro"><i class="fas fa-paint-roller"></i></p>
+                            <ul class="list-group-item-s">
+                                <li>instalacji sanitarnych;</li>
+                                <li>instalacji elektrycznych</li>
+                                <li>instalacji klimatyzacyjnych i wentylacyjnych</li>
+                                <li>instalacji przyzywowych (domofony) i alarmowych</li>
+                                <li>instalacji i urządzeń grzewczych</li>
+                                <li>przewodów wentylacyjnych, spalinowych i dymowych</li>
+                            </ul>
+                        </div>
+                        <div class="bottom-card position-absolute bottom-0 start-50 translate-middle-x">
+                            <hr class="wrapper">
+                            <p class="text-muted text-center">Lorem ipsum dolor sit amet.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right-card-2 d-none d-md-flex col-md-8 my-4 shadow-sm position-relative">
+
+                    <div class="bubbles">
+                        <div class="bubble position-absolute top-0 start-0 translate-middle"></div>
+                        <div class="bubble position-absolute top-0 start-100 translate-middle"></div>
+                        <div class="bubble position-absolute top-100 start-100 translate-middle"></div>
+                        <div class="bubble position-absolute top-100 start-0 translate-middle"></div>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            <div class="about-bot d-flex wrapper row">
+                <div class="col-12 col-md-4">
+                    <div class="about-card my-4 mx-2 shadow-sm position-relative">
+                        <div class="about-card-top">
+                            <div class="bubbles">
+                                <div class="bubble position-absolute top-0 start-0 translate-middle"></div>
+                                <div class="bubble position-absolute top-0 start-100 translate-middle"></div>
+                                <div class="bubble position-absolute top-100 start-100 translate-middle"></div>
+                                <div class="bubble position-absolute top-100 start-0 translate-middle"></div>
+                            </div>
+                            <p class="text-center p-2"><i class="fas fa-pencil-alt"></i>Wykonanie nowych instalacji
+                                gazowych.</p>
+                        </div>
+                        <div class="about-card-content ">
+                            <p class="text-center hydro"><i class="fas fa-paint-roller"></i></p>
+                            <ul class="list-group-item-s">
+                                <li>ścianek działowych, sufitów, tynków i okładzin wewnętrznych</li>
+                                <li>podłóg i posadzek</li>
+                                <li>okien, świetlików i drzwi</li>
+                                <li>powłok malarskich i tapet</li>
+                                <li>elementów kowalsko-ślusarskich</li>
+                                <li>izolacji przeciwwodnych, przeciwwilgociowych, dźwiękochłonnych i cieplnych</li>
+                            </ul>
+                        </div>
+                        <div class="bottom-card position-absolute bottom-0 start-50 translate-middle-x">
+                            <hr class="wrapper">
+                            <p class="text-muted text-center">Lorem ipsum dolor sit amet.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right-card-3 d-none d-md-flex col-md-8 my-4 shadow-sm position-relative">
+
+                    <div class="bubbles">
+                        <div class="bubble position-absolute top-0 start-0 translate-middle"></div>
+                        <div class="bubble position-absolute top-0 start-100 translate-middle"></div>
+                        <div class="bubble position-absolute top-100 start-100 translate-middle"></div>
+                        <div class="bubble position-absolute top-100 start-0 translate-middle"></div>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            <div class="about-bot d-flex wrapper row">
+
+                <div class="col-12 col-md-4">
+                    <div class="about-card my-4 mx-2 shadow-sm position-relative">
+                        <div class="about-card-top">
+                            <div class="bubbles">
+                                <div class="bubble position-absolute top-0 start-0 translate-middle"></div>
+                                <div class="bubble position-absolute top-0 start-100 translate-middle"></div>
+                                <div class="bubble position-absolute top-100 start-100 translate-middle"></div>
+                                <div class="bubble position-absolute top-100 start-0 translate-middle"></div>
+                            </div>
+                            <p class="text-center p-2"><i class="fas fa-pencil-alt"></i>Remont, modernizacja, wymiana
+                                lub wykonanie nowych instalacji oraz montaż trwale umiejscowionych: wyposażenia,
+                                armatury i urządzeń dotyczących:</p>
+                        </div>
+                        <div class="about-card-content ">
+                            <ul class="list-group-item-s">
+                                <li>instalacji sanitarnych</li>
+                                <li>instalacji elektrycznych, odgromowych i uziemienia;</li>
+                                <li>instalacji klimatyzacyjnych i wentylacyjnych;</li>
+                                <li>instalacji przyzywowych (domofony) i alarmowych</li>
+                                <li>przewodów wentylacyjnych, spalinowych i dymowych;</li>
+                                <li>instalacji i urządzeń grzewczych.</li>
+                            </ul>
+                        </div>
+                        <div class="bottom-card position-absolute bottom-0 start-50 translate-middle-x">
+                            <hr class="wrapper">
+                            <p class="text-muted text-center">Lorem ipsum dolor sit amet.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right-card-4 d-none d-md-flex col-md-8 my-4 shadow-sm position-relative">
+
+                    <div class="bubbles">
+                        <div class="bubble position-absolute top-0 start-0 translate-middle"></div>
+                        <div class="bubble position-absolute top-0 start-100 translate-middle"></div>
+                        <div class="bubble position-absolute top-100 start-100 translate-middle"></div>
+                        <div class="bubble position-absolute top-100 start-0 translate-middle"></div>
+                    </div>
+
+                </div>
+            </div>
+            <hr> -->
+
+            <!-- KARUZELA
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                  <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                  <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+                  <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
+                  <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/img/1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/5.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </a>
+              </div> -->
+
+
+
+
+            <!-- <div class="col-6 col-md-4">
+                    <div class="about-card my-4 mx-2 shadow-sm">
+                        <div class="about-card-top"><p class="text-center p-2"><i class="fas fa-pencil-alt"></i>Lorem ipsum dolor sit amet consectetur.</p></div>
+                        <div class="about-card-content">
+                            <p class="p-2 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="about-card my-4 mx-2 shadow-sm">
+                        <div class="about-card-top"><p class="text-center p-2"><i class="fas fa-pencil-alt"></i>Lorem ipsum dolor sit amet consectetur.</p></div>
+                        <div class="about-card-content">
+                            <p class="p-2 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="about-card my-4 mx-2 shadow-sm">
+                        <div class="about-card-top"><p class="text-center p-2"><i class="fas fa-pencil-alt"></i>Lorem ipsum dolor sit amet consectetur.</p></div>
+                        <div class="about-card-content">
+                            <p class="p-2 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="about-card my-4 mx-2 shadow-sm">
+                        <div class="about-card-top"><p class="text-center p-2"><i class="fas fa-pencil-alt"></i>Lorem ipsum dolor sit amet consectetur.</p></div>
+                        <div class="about-card-content">
+                            <p class="p-2 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="about-card my-4 mx-2 shadow-sm">
+                        <div class="about-card-top"><p class="text-center p-2"><i class="fas fa-pencil-alt"></i>Lorem ipsum dolor sit amet consectetur.</p></div>
+                        <div class="about-card-content">
+                            <p class="p-2 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="about-card my-4 mx-2 shadow-sm">
+                        <div class="about-card-top"><p class="text-center p-2"><i class="fas fa-pencil-alt"></i>Lorem ipsum dolor sit amet consectetur.</p></div>
+                        <div class="about-card-content">
+                            <p class="p-2 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="about-card my-4 mx-2 shadow-sm">
+                        <div class="about-card-top"><p class="text-center p-2"><i class="fas fa-pencil-alt"></i>Lorem ipsum dolor sit amet consectetur.</p></div>
+                        <div class="about-card-content">
+                            <p class="p-2 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="about-card my-4 mx-2 shadow-sm">
+                        <div class="about-card-top"><p class="text-center p-2"><i class="fas fa-pencil-alt"></i>Lorem ipsum dolor sit amet consectetur.</p></div>
+                        <div class="about-card-content">
+                            <p class="p-2 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div> -->
+            <div class="info-pomiar py-4 position-relative bg-warning">
+                <h5 class="text-center text-lg-end text-dark wrapper">Wykonujemy pomiary i wycenę gratis!</h5>
+                <!-- <div class="divider position-absolute top-55 end-0 translate-middle-y"></div> -->
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <section id="desc">
+        <h2 class="wrapper pt-5">Zakres prac remontowo-budowlanych:</h2>
+        <div class="container-descripton wrapper d-flex row justify-content-center py-5 px-5 mt-5">
+            <div class="col-md-4 visibility os-animation test" data-animation="fadeIn" data-delay=".3s">
+                <img class="img-thumbnail border-0 shadow" src="/img/wykonczenie.jpg" alt="">
+                <div class="stripe"></div>
+                <h3 class="text-center pt-4 pb-2">Wykończenia kompleksowe</h3>
+                <p class="text-center">Kupiłeś mieszkanie w stanie deweloperskim i szukasz solidnej firmy do wykończenia
+                    mieszkania, albo domu? Dobrze trafiłeś! Nasz doświadczony zespół zajmie się każdym etapem
+                    wykończenia Twojego mieszkania.</p>
+            </div>
+            <div class="col-md-4 visibility os-animation" data-animation="fadeIn" data-delay=".5s">
+                <img src="/img/remont.jpg" alt="" class="img-thumbnail border-0 shadow">
+                <h3 class="text-center pt-4 pb-2">Remonty</h3>
+                <p class="text-center">Potrzebujesz odnowić swoje mieszkanie, biuro, albo miejsce pracy? Jesteśmy gotowi
+                    podjąć się każdego wyzwania. Z nami nie musisz się stresować swoim remontem. Działamy sprawnie i w
+                    rozsądnych cenach. Wystawiamy również faktury VAT.</p>
+            </div>
+            <div class="col-md-4 visibility os-animation" data-animation="fadeIn" data-delay=".7s">
+                <img src="/img/zdj1.jpg" alt="" class="img-thumbnail border-0 shadow">
+                <h3 class="text-center pt-4 pb-2">Malowanie i tapetowanie</h3>
+                <p class="text-center">Twoje ściany wymagają odwieżenia, a sam nie masz czasu się tym zająć?
+                    Profesjonalnie przygotujemy i pomalujemy lub położymy tapetę na Twoich ścianach. Doradzimy najlepsze
+                    wg. nas produkty, które będą służyć latami.</p>
+            </div>
+            <div class="col-md-4 visibility os-animation" data-animation="fadeIn" data-delay=".9s">
+                <img src="/img/lazienka.jpg" alt="" class="img-thumbnail border-0 shadow">
+                <h3 class="text-center pt-4 pb-2">Łazienka</h3>
+                <p class="text-center">Kompleksowa usługa wykończenia lub wyremontowania łazienki. Szybko i bardzo
+                    solidnie zrobimy dla Ciebie łazienkę marzeń. Zajmiemy się instalacją wodno-kanalizacyjną,
+                    przygotujemy podłogi, położymy płytki i wstawimy armaturę. Wszystko równo i zgodnie z Twoim
+                    projektem.</p>
+            </div>
+            <div class="col-md-4 visibility os-animation" data-animation="fadeIn" data-delay="1.1s">
+                <img src="/img/floor.jpg" alt="" class="img-thumbnail border-0 shadow">
+                <h3 class="text-center pt-4 pb-2">Podłogi</h3>
+                <p class="text-center">Specjalizujemy się w montażu wszelkiego rodzaju podłóg, w tym podłóg drewnianych
+                    i laminowanych. Wiemy jak ważna jest podłoga położona solidnie, dlatego dokładamy wszelkich starań,
+                    aby zaspokoić oczekiwania najbardziej wymagających klientów.</p>
+            </div>
+            <div class="col-md-4 visibility os-animation" data-animation="fadeIn" data-delay="1.3s">
+                <img src="/img/plytka.jpg" alt="" class="img-thumbnail border-0 shadow">
+                <h3 class="text-center pt-4 pb-2">Układanie płytek</h3>
+                <p class="text-center">Jesteśmy ekspertami od układania płytek. Gres, glazura, czy terakota nie mają dla
+                    nas tajemnic. Położymy i zafugujemy płytki w dowolnym miejscu: łazience, kuchni, na balkonie,
+                    tarasie, czy garażu. Wszystko starannie i równo.</p>
+            </div>
+            <div class="col-md-4 visibility os-animation" data-animation="fadeIn" data-delay="1.3s">
+                <img src="/img/elektro.jpg" alt="" class="img-thumbnail border-0 shadow">
+                <h3 class="text-center pt-4 pb-2">Instalacje elektryczne</h3>
+                <p class="text-center">Chcesz zawiesić nową lampę, wymienić lub przesunąć kontakty, zamontować nowe
+                    urządzenia elektryczne, w tym płytę indukcyjną, a może masz inne potrzeby związane z elektryką? Mamy
+                    doświadczenie oraz stosowne do tych prac uprawnienia.</p>
+            </div>
+            <div class="col-md-4 visibility os-animation" data-animation="fadeIn" data-delay="1.3s">
+                <img src="/img/drzwi.jpg" alt="" class="img-thumbnail border-0 shadow">
+                <h3 class="text-center pt-4 pb-2">Montaż</h3>
+                <p class="text-center">Wykonamy z całą starannością montaż pieców, stolarki drzwiowej i okiennej.
+                    Zajmiemy się wstawieniem parapetów, okien, ościeżnic, drzwi i montażem mebli zgodnie z najwyższymi
+                    standardami. </p>
+            </div>
+            <div class="col-md-4 visibility os-animation" data-animation="fadeIn" data-delay="1.3s">
+                <img src="/img/kran.jpg" alt="" class="img-thumbnail border-0 shadow">
+                <h3 class="text-center pt-4 pb-2">Instalacje wodno-kanalizacyjne</h3>
+                <p class="text-center">Zajmiemy się wszystkimi elementami instalacji wodno-kanalizacyjnych. Biały
+                    montaż, przyłącza wodno-kanalizacyjne, instalacje kanalizacji, instalacje wody ciepłej, zimnej i
+                    użytkowej.</p>
+            </div>
+            <div class="work-footer pt-4 text-success">
+                <h5 class="text-center">Nie znalazłeś tego, czego szukasz? Odezwij się do nas, a postaramy Ci pomóc!</h5>
+                <p class="text-center
+                ">Telefon: 123 456 789</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div style="height: 100vh;"></div>
+
+
+    <script src="js/lightbox-plus-jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="/js/animation.js"></script>
+    <script src="/js/jquery.waypoints.min"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>

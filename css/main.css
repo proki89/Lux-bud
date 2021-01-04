@@ -1,0 +1,511 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+  background-color: #f8f9fa;
+}
+
+h1 {
+  font-family: 'Fredoka One', sans-serif;
+}
+
+h2 {
+  font-family: 'Fredoka One', sans-serif;
+}
+
+.wrapper {
+  max-width: 2560px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.visibility {
+  visibility: hidden;
+}
+
+#talkbubble {
+  width: 120px;
+  height: 80px;
+  background: red;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#talkbubble:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 26px;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid red;
+  border-bottom: 13px solid transparent;
+}
+
+.bubble {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #aaaaaa;
+}
+
+.page-title {
+  color: #212121;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #eeeeee;
+  font-size: 1.1em;
+}
+
+nav .icon-logo {
+  padding-right: 5px;
+  color: gold;
+}
+
+nav .navbar-dark .navbar-nav .nav-link {
+  color: #eeeeee;
+}
+
+nav .navbar-dark:hover, nav .navbar-dark:focus {
+  color: #eeeeee;
+}
+
+nav .navbar-brand {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #eeeeee;
+  text-shadow: 3px 3px 10px #212121;
+}
+
+nav .nav-link a {
+  color: #eeeeee;
+}
+
+header .header-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+header .header-left {
+  color: #eeeeee;
+  position: relative;
+  height: 100vh;
+  background-image: url("/img/tools.jpg");
+  background-position: left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+header .header-left .btn {
+  border: 2px solid gold;
+  background: none;
+  font-size: 18px;
+  color: gold;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 3px 3px -10px #333333;
+          box-shadow: 3px 3px -10px #333333;
+  -webkit-transition: background-color .2s, color .2s;
+  transition: background-color .2s, color .2s;
+}
+
+header .header-left .btn:hover {
+  background-color: gold;
+  color: #212121;
+}
+
+header .header-left .left-text {
+  height: 100%;
+  position: absolute;
+  top: 25%;
+}
+
+header .header-left .left-text h1 {
+  text-shadow: 3px 3px 10px #212121;
+}
+
+header .header-left .left-text .under-title {
+  text-shadow: 3px 3px 5px #212121;
+}
+
+header .header-left i {
+  text-shadow: 3px 3px 10px #212121;
+  color: gold;
+}
+
+header .header-left .hat-ico {
+  position: absolute;
+  top: 30%;
+  color: gold;
+  text-shadow: 3px 3px 5px #212121;
+}
+
+header .header-left .tools-ico {
+  position: absolute;
+  text-shadow: 3px 3px 5px #212121;
+  top: 95%;
+  font-size: 4em;
+}
+
+header .header-right {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  background-color: #f8f9fa;
+  z-index: 0;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+header .header-right .top-header-right {
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+header .header-right .top-header-right img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+header .header-right .right-header-mid {
+  top: 38%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+header .hero-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -10;
+}
+
+header .right-text {
+  position: absolute;
+  height: 100%;
+  color: #eeeeee;
+}
+
+header .right-text p {
+  text-shadow: 3px 3px 10px #4a4a4a;
+}
+
+header .right-text h3 {
+  font-family: 'Fredoka One', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 10px #4a4a4a;
+  color: gold;
+}
+
+header .right-text .rating-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50%;
+  width: 100%;
+}
+
+header .right-text .rating-container i {
+  font-size: 100px;
+}
+
+header .right-text .rating-container .img-top {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  opacity: .8;
+  border: 1px solid gold;
+  -webkit-box-shadow: -10px 0 10px #212121;
+          box-shadow: -10px 0 10px #212121;
+}
+
+header .right-text .rating-container .top-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding-left: 20px;
+  opacity: .5;
+}
+
+header .right-text .rating-container .i-gradient {
+  background: #ffd500;
+  background: radial-gradient(circle, #ffd500 0%, #212121 100%);
+}
+
+header .right-text .rating-container p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  text-align: center;
+  color: #eeeeee;
+}
+
+header .right-text .rating-container .top-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  padding-right: 20px;
+  opacity: .5;
+}
+
+header .right-text .rating-container .star-container {
+  z-index: -1;
+}
+
+header .right-text .first-title {
+  right: 25%;
+}
+
+header .right-text button {
+  background: none;
+  color: gold;
+  border: 1px solid gold;
+}
+
+header .right-text button:hover {
+  background: none;
+  background-color: gold;
+  color: #212121;
+  border: black;
+}
+
+header .right-text i {
+  color: gold;
+  font-size: 30px;
+  text-shadow: 0px 3px 10px black;
+  padding-bottom: 30px;
+}
+
+#about {
+  background-color: #aaaaaa;
+}
+
+#about .jumbotron i {
+  color: gold;
+  font-size: 30px;
+  text-shadow: 3px 3px 10px #212121;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+#about .jumbotron i:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+#about .jumbotron h5 {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+#about .jumbotron .about-hero {
+  position: relative;
+  height: 100%;
+  background-image: url("/img/about-hero.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+#about .jumbotron .about-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 12, 4, 0.801);
+  z-index: -10;
+}
+
+#about .jumbotron .about-desc {
+  font-size: 15px;
+  color: #eeeeee;
+}
+
+#about .jumbotron .about-bot {
+  color: #212121;
+  height: 100%;
+  overflow: hidden;
+}
+
+#about .jumbotron .about-bot i {
+  font-size: 25px;
+  padding-right: 10px;
+  text-shadow: none;
+  color: #212121;
+}
+
+#about .jumbotron .about-bot .about-shadow2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 12, 4, 0.897);
+  z-index: -10;
+}
+
+#about .jumbotron .about-bot .about-card {
+  height: 400px;
+  background-color: #f0f0f0;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  border-radius: 5px;
+}
+
+#about .jumbotron .about-bot .about-card .about-card-top {
+  background-color: #5e5c5c;
+  color: #f0f0f0;
+}
+
+#about .jumbotron .about-bot .about-card .bottom-card {
+  width: 100%;
+}
+
+#about .jumbotron .about-bot .about-card .fa-water:before {
+  content: "\f773";
+  padding: 0 10px;
+  font-size: 30px;
+  border-radius: 50%;
+  color: blue;
+}
+
+#about .jumbotron .about-bot .about-card .about-card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#about .jumbotron .about-bot .right-card {
+  background-color: #eeeeee;
+  height: 400px;
+  background-image: url("/img/zdj1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+#about .jumbotron .about-bot .right-card-2 {
+  background-color: #eeeeee;
+  height: 400px;
+  background-image: url("/img/lazienka.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+#about .jumbotron .about-bot .right-card-3 {
+  background-color: #eeeeee;
+  height: 400px;
+  background-image: url("/img/gaz.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+#about .jumbotron .about-bot .right-card-4 {
+  background-color: #eeeeee;
+  height: 400px;
+  background-image: url("/img/elektryczna.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+#about .info-pomiar h5 {
+  color: #333333;
+  font-weight: bold;
+}
+
+#about .info-pomiar .divider {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #333333;
+}
+
+#carouselExampleCaptions .carousel-item {
+  position: relative;
+  height: 600px;
+}
+
+#carouselExampleCaptions .carousel-item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#desc h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+#desc .container-descripton {
+  background-color: #fff;
+  border: 1px solid #eeeeee;
+  color: #4a4a4a;
+}
+
+#desc .container-descripton i {
+  font-size: 2em;
+  border-radius: 50%;
+  padding: 1.5rem;
+  color: #1389fd;
+  background-color: #e7f8ff;
+}
+
+#desc .container-descripton img {
+  padding: 0;
+}
+/*# sourceMappingURL=main.css.map */
