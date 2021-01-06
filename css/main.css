@@ -108,7 +108,7 @@ header .header-left {
   color: #eeeeee;
   position: relative;
   height: 100vh;
-  background-image: url("/img/tools.jpg");
+  background-image: url("../img/tools.jpg");
   background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -348,7 +348,7 @@ header .right-text i {
 #about .jumbotron .about-hero {
   position: relative;
   height: 100%;
-  background-image: url("/img/about-hero.jpg");
+  background-image: url("../img/about-hero.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -517,6 +517,30 @@ header .right-text i {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+#carouselExampleCaptions .carousel-item .bubble-1 {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: black;
+  top: 25%;
+  left: -150px;
+  opacity: .4;
+  z-index: 1;
+}
+
+#carouselExampleCaptions .carousel-item .bubble-2 {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: black;
+  top: 25%;
+  right: -150px;
+  opacity: .4;
+  z-index: 1;
 }
 
 #carouselExampleCaptions i {
