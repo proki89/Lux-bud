@@ -1,12 +1,11 @@
 *, *::after, *::before
+    -webkit-box-sizing: border-box
     box-sizing: border-box
     margin: 0
     padding: 0
-
 html
     scroll-behavior: smooth
     font-size: 16px
-
 body
     position: relative
     font-family: 'Roboto', sans-serif
@@ -22,6 +21,14 @@ h2
     margin: 0 auto
 .visibility
     visibility: hidden
+.add-shadow
+    background-color: rgba(0, 0, 0, 0.8)
+.hero-shadow
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.7)
+    z-index: -10
 #talkbubble
     width: 120px
     height: 80px
@@ -29,37 +36,31 @@ h2
     position: relative
     border: 1px solid black
     border-radius: 10px
-
-#talkbubble:before
-    content: ""
-    position: absolute
-    right: 100%
-    top: 26px
-    width: 0
-    height: 0
-    border-top: 13px solid transparent
-    border-right: 26px solid red
-    border-bottom: 13px solid transparent
+    &:before
+        content: ""
+        position: absolute
+        right: 100%
+        top: 26px
+        width: 0
+        height: 0
+        border-top: 13px solid transparent
+        border-right: 26px solid red
+        border-bottom: 13px solid transparent
 .bubble
     height: 20px
     width: 20px
     border-radius: 50%
     background-color: #aaaaaa
 .page-title
-    // background-clip: text
-    // -webkit-background-clip: text
-    // color: transparent; 
-    // background-image: linear-gradient(180deg, gold, #131212)
     color: #212121
-
     font-family: 'Roboto', sans-serif
-
 nav
+    -webkit-transition: all .6s
+    transition: all .6s
     a
         text-transform: uppercase
         color: #eeeeee
         font-size: 1.1em
-
     .icon-logo
         padding-right: 5px
         color: gold
@@ -67,61 +68,49 @@ nav
         .navbar-nav
             .nav-link
                 color: #eeeeee
-
-        &:hover,
-        &:focus
-            color: #eeeeee
-
     .navbar-brand
         font-family: 'Fredoka One', sans-serif
         font-size: 22px
         text-transform: uppercase
         color: #eeeeee
         text-shadow: 3px 3px 10px #212121
-
     .nav-link
         a
             color: #eeeeee
-
+nav .navbar-dark:hover, nav .navbar-dark:focus
+    color: #eeeeee
 header
     .header-wrapper
         margin: 0
         padding: 0
     .header-left
-        // position: relative
-        // height: 100vh
-        // margin-right: 0
-        // padding-right: 0
-        // padding-left: 0
-        // margin-left: 0
-        // background: hsla(0, 0%, 60%, 1);
-        // background: linear-gradient(360deg, hsla(0, 0%, 60%, 1) 0%, hsla(0, 0%, 13%, 1) 100%)
         color: #eeeeee
         position: relative
         height: 100vh
-        background-image: url('/img/tools.jpg')
+        background-image: url("../img/tools.jpg")
         background-position: left center
         background-size: cover
         background-repeat: no-repeat
-        // background-attachment: fixed
         z-index: 0
         margin-right: 0
         padding-right: 0
         padding-left: 0
         margin-left: 0
-
         .btn
             border: 2px solid gold
             background: none
             font-size: 18px
             color: gold
             letter-spacing: 1px
+            -webkit-box-shadow: 3px 3px -10px #333333
             box-shadow: 3px 3px -10px #333333
+            -webkit-transition: background-color .2s, color .2s
             transition: background-color .2s, color .2s
-        .btn:hover
-            background-color: gold
-            color: #212121
-
+            &:hover
+                background-color: gold
+                color: #212121
+            &:active
+                background-color: gold
         .left-text
             height: 100%
             position: absolute
@@ -138,7 +127,6 @@ header
             top: 30%
             color: gold
             text-shadow: 3px 3px 5px #212121
-            // font-size: 5em
         .tools-ico
             position: absolute
             text-shadow: 3px 3px 5px #212121
@@ -148,142 +136,260 @@ header
         overflow: hidden
         position: relative
         height: 100vh
-        // background-image: url('/img/tools.jpg')
-        // background-position: left center
-        // background-size: cover
-        // background-repeat: no-repeat
-        // background-attachment: fixed
-        // background: hsla(0, 0%, 60%, 1)
-        // background: linear-gradient(360deg, hsla(0, 0%, 60%, 1) 0%, hsla(0, 0%, 10%, 1) 100%)
         background-color: #f8f9fa
         z-index: 0
         margin-right: 0
         padding-right: 0
         padding-left: 0
         margin-left: 0
-
-        .top-header-right
-            top: 15%
-            left: 50%
-            transform: translate(-50%, 0)
-            img
+        .header-content
+            height: 75%
+            .1
+                width: 100%
                 height: 150px
-                width: 150px
+                background-color: red
+            .2
+                width: 100%
+                height: 150px
+                background-color: yellow
+            .3
+                width: 100%
+                height: 3150px
+                background-color: blue
+        .first
+            height: 75%
+            padding: 0
+            overflow: hidden
+            .ozdoba
+                height: 200px
+                width: 200px
+                background-color: #293241
                 border-radius: 50%
-        .right-header-mid
-            top: 38%
+            .square-left
+                height: 180px
+                width: 100%
+                background-color: #3378c231
+                -webkit-transform: skewY(135deg)
+                transform: skewY(135deg)
+        .second
+            background-image: url(../img/img-top.jpg)
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: top
+            height: 75%
+            padding: 0
+            overflow: hidden
+            background-color: #dddddd
+            .down
+                position: absolute
+                bottom: 0
+                height: 200px
+                width: 100%
+                background-color: gold
+                .box-contact
+                    height: 100px
+                    width: 100%
+                    background-color: #293241
+                    p
+                        color: #ffffff
+            .square-right
+                height: 180px
+                width: 100%
+                background-color: #f8f9fa
+                -webkit-transform: skewY(225deg)
+                transform: skewY(225deg)
+        .down-right
+            height: 25%
+            background-color: #293241
+            p
+                color: #ffffff
+            i
+                color: gold
+                background-color: #3378c231
+                font-size: 35px
+                padding: 15px
+                border-radius: 50%
+                -webkit-transition: background-color .3s, -webkit-transform .9s
+                transition: background-color .3s, -webkit-transform .9s
+                transition: transform .9s, background-color .3s
+                transition: transform .9s, background-color .3s, -webkit-transform .9s
+                &:hover
+                    -webkit-transform: rotate(360deg)
+                    transform: rotate(360deg)
+                    background-color: #3379C2
+            .first-down
+                position: absolute
+                top: 20%
+                left: 20%
+                -webkit-transform: translate(-50%, 0)
+                transform: translate(-50%, 0)
+            .second-down
+                position: absolute
+                top: 20%
+                left: 50%
+                -webkit-transform: translate(-50%, 0)
+                transform: translate(-50%, 0)
+            .third-down
+                position: absolute
+                top: 20%
+                left: 80%
+                -webkit-transform: translate(-50%, 0)
+                transform: translate(-50%, 0)
+        img
+            top: 20%
             left: 50%
-            transform: translate(-50%, 0)
+            -webkit-transform: translate(-50%, -50%)
+            transform: translate(-50%, -50%)
+            height: 150px
+            width: 150px
+            border-radius: 50%
+        p
+            font-size: 18px
+            color: #4a4a4a
+            top: 35%
+        h3
+            top: 30%
+            left: 50%
+            -webkit-transform: translate(-50%, -50%)
+            transform: translate(-50%, -50%)
+        i
+            bottom: 10%
+            right: 20%
+            color: #333333
+            font-size: 50px
+            text-shadow: 0 10px px #4a4a4a
+        .right-square
+            color: #4a4a4a
+            position: absolute
+            left: 0
+            bottom: 0
+            height: 100%
+            width: 100%
+            background-image: url(../img/tools.jpg)
+            -webkit-clip-path: polygon(0% 100%, 0% 73%, 100% 49%, 100% 100%)
+            clip-path: polygon(0% 100%, 0% 73%, 100% 49%, 100% 100%)
+            z-index: -1
+        .second-square
+            color: #4a4a4a
+            position: absolute
+            left: 0
+            bottom: 0
+            height: 800px
+            width: 100%
+            background: #ffd900
+            background: linear-gradient(310deg, #ffd900 0%, #c16e53 100%)
+            -webkit-clip-path: circle(50% at 100% 100%)
+            clip-path: circle(50% at 100% 100%)
+            z-index: -1
     .hero-shadow
         position: absolute
         width: 100%
         height: 100%
-        background-color: rgba(0,0,0,.6)
+        background-color: rgba(0, 0, 0, 0.6)
         z-index: -10
     .right-text
-
         position: absolute
         height: 100%
         color: #eeeeee
         p
             text-shadow: 3px 3px 10px #4a4a4a
-
         h3
             font-family: 'Fredoka One', sans-serif
             text-transform: uppercase
             text-shadow: 3px 3px 10px #4a4a4a
             color: gold
         .rating-container
+            display: -webkit-box
+            display: -ms-flexbox
             display: flex
             height: 50%
             width: 100%
-            // .rating-hero
-            //     position: relative
-            //     height: 100%
-            //     background-image: url('/img/hero2.jpg')
-            //     background-position: left center
-            //     background-size: cover
-            //     background-repeat: no-repeat
-            //     z-index: -9
-            // .second-shadow
-            //     position: absolute
-            //     width: 100%
-            //     height: 100%
-            //     background-color: #e4a3665e
-            //     z-index: -10
             i
                 font-size: 100px
-
             .img-top
                 height: 150px
                 width: 150px
                 border-radius: 50%
                 opacity: .8
                 border: 1px solid gold
+                -webkit-box-shadow: -10px 0 10px #212121
                 box-shadow: -10px 0 10px #212121
-
             .top-left
+                display: -webkit-box
+                display: -ms-flexbox
                 display: flex
+                -webkit-box-pack: start
+                -ms-flex-pack: start
                 justify-content: start
                 padding-left: 20px
                 opacity: .5
             .i-gradient
-                background: hsla(50, 100%, 50%, 1)
-                background: radial-gradient(circle, hsla(50, 100%, 50%, 1) 0%, hsla(0, 0%, 13%,1) 100%)
-
+                background: #ffd500
+                background: radial-gradient(circle, #ffd500 0%, #212121 100%)
             p
+                display: -webkit-box
+                display: -ms-flexbox
                 display: flex
+                -webkit-box-pack: start
+                -ms-flex-pack: start
                 justify-content: start
+                -webkit-box-align: center
+                -ms-flex-align: center
                 align-items: center
                 font-size: 20px
                 text-align: center
                 color: #eeeeee
             .top-right
+                display: -webkit-box
+                display: -ms-flexbox
                 display: flex
+                -webkit-box-pack: end
+                -ms-flex-pack: end
                 justify-content: end
+                -webkit-box-align: end
+                -ms-flex-align: end
                 align-items: end
                 padding-right: 20px
                 opacity: .5
             .star-container
                 z-index: -1
-
         .first-title
             right: 25%
         button
             background: none
             color: gold
             border: 1px solid gold
-        button:hover
-            background: none
-            background-color: gold
-            color: #212121
-            border: black
+            &:hover
+                background: none
+                background-color: gold
+                color: #212121
+                border: black
         i
             color: gold
             font-size: 30px
             text-shadow: 0px 3px 10px black
             padding-bottom: 30px
-
 #about
     background-color: #aaaaaa
-
     .jumbotron
-
         i
             color: gold
             font-size: 30px
             text-shadow: 3px 3px 10px #212121
-
+            -webkit-transition: -webkit-transform .3s
+            transition: -webkit-transform .3s
             transition: transform .3s
-        i:hover
-            transform: scale(1.4)
+            transition: transform .3s, -webkit-transform .3s
+            &:hover
+                -webkit-transform: scale(1.4)
+                transform: scale(1.4)
         h5
             color: #ffffff
             text-transform: uppercase
         .about-hero
             position: relative
             height: 100%
-            background-image: url('/img/about-hero.jpg')
+            background-image: url("../img/about-hero.jpg")
             background-position: top center
             background-size: cover
             background-repeat: no-repeat
@@ -302,7 +408,6 @@ header
             color: #212121
             height: 100%
             overflow: hidden
-
             i
                 font-size: 25px
                 padding-right: 10px
@@ -316,34 +421,32 @@ header
                 z-index: -10
             .about-card
                 height: 400px
-
                 background-color: #f0f0f0
+                -webkit-transition: -webkit-transform .3s
+                transition: -webkit-transform .3s
                 transition: transform .3s
+                transition: transform .3s, -webkit-transform .3s
                 border-radius: 5px
                 .about-card-top
                     background-color: #5e5c5c
                     color: #f0f0f0
-
                 .bottom-card
                     width: 100%
-
-                .hydro
-
-                .fa-water:before
-                    content: "\f773"
-                    padding: 0 10px
-                    font-size: 30px
-                    border-radius: 50%
-                    background-color:
-                    color: blue
-                .fa-water:hover
-
-                .about-card:hover
-                    transform: scale(1.1)
+                .fa-water
+                    &:before
+                        content: "\f773"
+                        padding: 0 10px
+                        font-size: 30px
+                        border-radius: 50%
+                        color: blue
+                .about-card
+                    &:hover
+                        -webkit-transform: scale(1.1)
+                        transform: scale(1.1)
             .right-card
                 background-color: #eeeeee
                 height: 400px
-                background-image: url('/img/zdj1.jpg')
+                background-image: url("/img/zdj1.jpg")
                 background-position: center center
                 background-size: cover
                 background-repeat: no-repeat
@@ -351,7 +454,7 @@ header
             .right-card-2
                 background-color: #eeeeee
                 height: 400px
-                background-image: url('/img/lazienka.jpg')
+                background-image: url("/img/lazienka.jpg")
                 background-position: center center
                 background-size: cover
                 background-repeat: no-repeat
@@ -359,7 +462,7 @@ header
             .right-card-3
                 background-color: #eeeeee
                 height: 400px
-                background-image: url('/img/gaz.jpg')
+                background-image: url("/img/gaz.jpg")
                 background-position: center center
                 background-size: cover
                 background-repeat: no-repeat
@@ -367,7 +470,7 @@ header
             .right-card-4
                 background-color: #eeeeee
                 height: 400px
-                background-image: url('/img/elektryczna.jpg')
+                background-image: url("/img/elektryczna.jpg")
                 background-position: center center
                 background-size: cover
                 background-repeat: no-repeat
@@ -381,17 +484,6 @@ header
             width: 15px
             border-radius: 50%
             background-color: #333333
-#carouselExampleCaptions
-    .carousel-item
-        position: relative
-        height: 600px
-
-        img
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%,-50%)
-
 #desc
     h2
         font-family: 'Roboto', sans-serif
@@ -401,11 +493,117 @@ header
         color: #4a4a4a
         i
             font-size: 2em
-
             border-radius: 50%
             padding: 1.5rem
             color: #1389fd
             background-color: #e7f8ff
         img
             padding: 0
-            
+#gallery
+    h2
+        font-family: 'Roboto', sans-serif
+    .wrapper
+        max-width: 2560px
+        width: 80%
+        margin: 0 auto
+#carouselExampleCaptions
+    .carousel-item
+        position: relative
+        height: 600px
+        img
+            position: absolute
+            top: 50%
+            left: 50%
+            -webkit-transform: translate(-50%, -50%)
+            transform: translate(-50%, -50%)
+    i
+        font-size: 3.25rem
+    .carousel-caption
+        position: absolute
+    .caption-title
+        position: absolute
+        color: #ffffff
+        text-shadow: 0 1px 2px #1a1616
+        bottom: 60px
+        left: 80px
+        background: #ffffff11
+        -webkit-box-shadow: 0 8px 32px 0 #d3d4db5e
+        box-shadow: 0 8px 32px 0 #d3d4db5e
+        backdrop-filter: blur(4px)
+        -webkit-backdrop-filter: blur(4px)
+        border-radius: 10px
+    .carousel-indicators
+        bottom: -50px
+        li
+            width: 10px
+            height: 10px
+            border-radius: 100%
+            background-color: #333333
+.material-info
+    overflow: hidden
+    background-color: #ffffff
+    border: 1px solid #eeeeee
+    color: #4a4a4a
+    img
+        max-height: 100px
+        max-width: 100px
+footer
+    color: #ffffff
+    h5
+        color: #eeeeee
+    .footer-desc
+        background-color: #f8f9f8
+        color: #333333
+    .footer-hero
+        position: relative
+        height: 100%
+        background-color: #293241
+        margin-right: 0
+        padding-right: 0
+        padding-left: 0
+        margin-left: 0
+        z-index: 10
+    .footer-title
+        text-align: center
+        font-family: 'Fredoka One', sans-serif
+        font-size: 22px
+        text-transform: uppercase
+        color: #ffffff
+        text-shadow: 3px 3px 10px #212121
+    .icon-logo
+        padding-right: 5px
+        color: gold
+    .left-element
+        .text-content
+            text-align: center
+            font-size: 14px
+        a
+            left: 50%
+            top: 0
+            -webkit-transform: translate(-50%, 0)
+            transform: translate(-50%, 0)
+        i
+            font-size: 30px
+            padding: 10px
+            color: #ffffff
+            -webkit-transition: color .3s, -webkit-transform .9s
+            transition: color .3s, -webkit-transform .9s
+            transition: transform .9s, color .3s
+            transition: transform .9s, color .3s, -webkit-transform .9s
+            &:hover
+                color: #eeeeee9d
+                -webkit-transform: rotate(360deg)
+                transform: rotate(360deg)
+    .footer-item
+        .tel-box
+            position: absolute
+            top: 25%
+            left: 50%
+            -webkit-transform: translate(-50%, -50%)
+            transform: translate(-50%, -50%)
+        .mail-box
+            position: absolute
+            top: 45%
+            left: 50%
+            -webkit-transform: translate(-50%, -50%)
+            transform: translate(-50%, -50%)
