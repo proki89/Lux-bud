@@ -122,7 +122,7 @@ header .header-wrapper {
 }
 
 header .header-left {
-  color: #eeeeee;
+  color: #ffffff;
   position: relative;
   height: 100vh;
   background-image: url("../img/tools.jpg");
@@ -206,22 +206,44 @@ header .header-right .header-content {
   height: 75%;
 }
 
-header .header-right .header-content .1 {
+header .header-right .header-content .elo {
+  position: relative;
   width: 100%;
-  height: 150px;
-  background-color: red;
+  height: 80%;
+  background-color: #f8f9f8;
 }
 
-header .header-right .header-content .2 {
+header .header-right .header-content .raz {
+  position: relative;
   width: 100%;
-  height: 150px;
-  background-color: yellow;
+  height: 10%;
+  background-color: #3378c231;
 }
 
-header .header-right .header-content .3 {
+header .header-right .header-content .raz p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 22px;
+}
+
+header .header-right .header-content .dwa {
+  position: relative;
   width: 100%;
-  height: 3150px;
-  background-color: blue;
+  height: 10%;
+  background-color: gold;
+}
+
+header .header-right .header-content .dwa p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: bold;
 }
 
 header .header-right .first {
@@ -317,7 +339,7 @@ header .header-right .down-right .first-down {
   transform: translate(-50%, 0);
 }
 
-header .header-right .down-right .second-down {
+header .header-right .down-right .third-down {
   position: absolute;
   top: 20%;
   left: 50%;
@@ -325,7 +347,7 @@ header .header-right .down-right .second-down {
   transform: translate(-50%, 0);
 }
 
-header .header-right .down-right .third-down {
+header .header-right .down-right .second-down {
   position: absolute;
   top: 20%;
   left: 80%;
@@ -696,9 +718,43 @@ header .right-text i {
   margin: 0 auto;
 }
 
+#gallery .carousel .slick-next:before {
+  font-family: 'slick';
+  font-size: 35px;
+  line-height: 1;
+  opacity: .75;
+  color: #4a4a4a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#gallery .carousel .slick-prev:before {
+  font-family: 'slick';
+  font-size: 35px;
+  line-height: 1;
+  opacity: .75;
+  color: #4a4a4a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#gallery .carousel a {
+  height: 500px;
+  position: relative;
+  margin-top: 30px;
+}
+
+#gallery .carousel a img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 #carouselExampleCaptions .carousel-item {
   position: relative;
-  height: 600px;
+  height: 500px;
 }
 
 #carouselExampleCaptions .carousel-item img {
@@ -721,14 +777,8 @@ header .right-text i {
   position: absolute;
   color: #ffffff;
   text-shadow: 0 1px 2px #1a1616;
-  bottom: 60px;
-  left: 80px;
-  background: #ffffff11;
-  -webkit-box-shadow: 0 8px 32px 0 #d3d4db5e;
-  box-shadow: 0 8px 32px 0 #d3d4db5e;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
+  bottom: 0;
+  left: 20%;
 }
 
 #carouselExampleCaptions .carousel-indicators {
