@@ -242,7 +242,7 @@ header .header-right .header-content .dwa p {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -817,6 +817,10 @@ footer .footer-desc {
   color: #333333;
 }
 
+footer .footer-desc p {
+  margin-bottom: 0;
+}
+
 footer .footer-hero {
   position: relative;
   height: 100%;
@@ -868,21 +872,5 @@ footer .left-element i:hover {
   color: #eeeeee9d;
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
-}
-
-footer .footer-item .tel-box {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-footer .footer-item .mail-box {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=main.css.map */
