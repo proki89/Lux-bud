@@ -77,7 +77,22 @@
                
             </div>
             <div class="header-right col-lg-5 d-flex flex-column p-5 justify-content-center align-items-center">
-         
+
+                
+<form action="mail.php" method="POST">
+    <p>Imię i nazwisko</p> <input type="text" name="name">
+    <p>Email</p> <input type="text" name="email">
+    <p>Telefon</p> <input type="text" name="phone">
+    
+    <p>Wiadomość</p><textarea name="message" rows="6" cols="25"></textarea><br />
+    <input class="btn btn-success" type="submit" value="Wyślij"><input class="btn btn-primary" type="reset" value="Wymaż">
+    </form>
+    
+    
+
+
+
+<!--          
                 <form id="contact-form" method="post" action="/contact.php" role="form">
 
                     <div class="messages"></div>
@@ -130,7 +145,7 @@
                         </div>
                     </div>
                 
-                </form>
+                </form> -->
 
 
 
