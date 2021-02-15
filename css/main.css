@@ -83,6 +83,20 @@ h2 {
   background-color: #aaaaaa;
 }
 
+.slick-dots li button:before {
+  font-size: 10px;
+}
+
+.fa-bars:before {
+  content: "\f0c9";
+  color: #fff;
+  font-size: 26px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
 .page-title {
   color: #212121;
   font-family: 'Roboto', sans-serif;
@@ -210,13 +224,47 @@ header .header-left .header-bottom {
 header .header-right {
   overflow: hidden;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100vh;
-  background-color: #f8f9fa;
+  background-image: url("../img/header-img2.jpg");
   z-index: 0;
   margin-right: 0;
   padding-right: 0;
   padding-left: 0;
   margin-left: 0;
+}
+
+header .header-right .rh-first {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: 90%;
+  height: 25%;
+  background-color: #fff;
+}
+
+header .header-right .rh-second {
+  position: absolute;
+  left: 5%;
+  top: 30%;
+  width: 90%;
+  height: 45%;
+  background-image: url(/img/header-img.img);
+}
+
+header .header-right .rh-third {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  width: 90%;
+  height: 15%;
+  background-color: #aaa;
 }
 
 header .header-right .header-content {
@@ -235,6 +283,50 @@ header .header-right .header-content .elo {
   z-index: 0;
 }
 
+header .header-right .header-content .elo .header-desc {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-right .header-content .elo .header-desc img {
+  top: 50%;
+  left: 50%;
+}
+
+header .header-right .header-content .elo .header-desc p {
+  font-size: 20px;
+  color: #f8f9f0;
+  text-align: center;
+}
+
+header .header-right .header-content .elo .header-desc .underline {
+  height: 1px;
+  width: 80%;
+  background-color: #fff;
+}
+
+header .header-right .header-content .elo .header-desc .stars-container i {
+  font-size: 14px;
+  color: gold;
+}
+
+header .header-right .header-content .elo .header-desc .quot {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 60px;
+}
+
 header .header-right .header-content .elo ul {
   color: #ffffff;
   text-align: center;
@@ -249,18 +341,6 @@ header .header-right .header-content .elo ul li {
 header .header-right .header-content .elo ul li:before {
   content: "\2714\0020";
   color: gold;
-}
-
-header .header-right .header-content .elo p {
-  position: absolute;
-  max-width: 90%;
-  color: #ffffff;
-  padding: 50px;
-  background: #ffffff09;
-  -webkit-box-shadow: 0 8px 32px 0 #a6a6aa11;
-          box-shadow: 0 8px 32px 0 #a6a6aa11;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
 }
 
 header .header-right .header-content .elo .quote i {
@@ -436,13 +516,11 @@ header .header-right .down-right .second-down {
 }
 
 header .header-right img {
-  top: 20%;
+  top: 0%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin: 0 5%;
   height: 150px;
   width: 150px;
-  border-radius: 50%;
 }
 
 header .header-right p {
@@ -614,7 +692,7 @@ header .right-text i {
 }
 
 #about {
-  background-color: #aaaaaa;
+  background-color: #f8f9fa;
 }
 
 #about .jumbotron i {
@@ -630,6 +708,17 @@ header .right-text i {
 #about .jumbotron i:hover {
   -webkit-transform: scale(1.4);
   transform: scale(1.4);
+}
+
+#about .jumbotron .fa-star {
+  color: gold;
+  font-size: 10px;
+  text-shadow: none;
+}
+
+#about .jumbotron .fa-star:hover {
+  -webkit-transform: none;
+          transform: none;
 }
 
 #about .jumbotron h5 {
@@ -752,6 +841,121 @@ header .right-text i {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 0;
+}
+
+#about h3 {
+  color: #4a4a4a;
+}
+
+#about .testimonials-first {
+  position: relative;
+  height: 325px;
+  width: 200px;
+  background: #fff;
+  text-align: center;
+  padding: 30px 30px 50px;
+  margin: 0 15px 100px;
+}
+
+#about .testimonials-first:before:after {
+  content: '';
+  border-top: 40px solid #fff;
+  border-right: 125px solid transparent;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+
+#about .testimonials-first:after {
+  border-right: none;
+  border-left: 125px solid transparent;
+  left: auto;
+  right: 0;
+}
+
+#about .pierdolnik {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(50% 82%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 82%, 0% 100%, 100% 100%);
+  background-color: #f8f9fa;
+}
+
+#about .testimonials-first .icon {
+  display: inline-block;
+  font-size: 80px;
+  padding: 15px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  color: #212529;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+#about .testimonials-first .testimonials-text {
+  font-size: 15px;
+  color: #777;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+#about .testimonials-first .testimonials-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about .testimonials-first .testimonials-content .pic {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  background-color: #f8f9fa;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 2px 2px #f8f9fa;
+          box-shadow: 0 0 2px 2px #f8f9fa;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#about .testimonials-first .testimonials-content .letter {
+  color: #aaa;
+  line-height: 1.5;
+  font-size: 30px;
+  text-shadow: 0px 0px 0px;
+}
+
+#about .testimonials-first .testimonials-content .remont-type {
+  font-size: 13px;
+  color: #5a5a5a;
+}
+
+#about .testimonials-first .testimonials-content .badge {
+  background-color: green;
+  margin-left: 4px;
+}
+
+#about .testimonials-first .test-title {
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #4a4a4a;
+  text-transform: capitalize;
+  margin: 0 0 5px 0;
+  padding-top: 5px;
 }
 
 #about .info-pomiar h5 {
@@ -909,6 +1113,30 @@ footer {
   color: #ffffff;
 }
 
+footer .underline-footer {
+  position: relative;
+  margin: 0 auto 20px;
+  height: 1px;
+  width: 100px;
+  background-color: gold;
+}
+
+footer .underline-footer .underline-box {
+  position: absolute;
+  right: 0;
+  height: 3px;
+  width: 20px;
+  background-color: gold;
+}
+
+footer .fa-star:before {
+  content: "\f005";
+  font-size: 10px;
+  padding: 0 1px;
+  color: #fdd600;
+  text-shadow: 0px 0px 5px solid black;
+}
+
 footer h5 {
   color: #eeeeee;
 }
@@ -918,7 +1146,17 @@ footer .footer-desc {
   color: #333333;
 }
 
-footer .footer-desc p {
+footer .nav-link {
+  color: #f8f9fa;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+footer .nav-link:hover {
+  color: gold;
+}
+
+footer .nav-link p {
   margin-bottom: 0;
 }
 
@@ -959,7 +1197,7 @@ footer .left-element a {
   transform: translate(-50%, 0);
 }
 
-footer .left-element i {
+footer .left-element .fa-facebook-square {
   font-size: 30px;
   padding: 10px;
   color: #ffffff;
@@ -969,16 +1207,22 @@ footer .left-element i {
   transition: transform .9s, color .3s, -webkit-transform .9s;
 }
 
-footer .left-element i:hover {
+footer .left-element .fa-facebook-square:hover {
   color: #eeeeee9d;
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
 
-@media (min-width: 1370px) {
-  .container-descripton img {
-    max-width: 100%;
-    height: auto;
-  }
+footer .right-footer i {
+  padding: 10px;
+  border-radius: 50%;
+}
+
+footer .right-footer .fa-at {
+  background-color: red;
+}
+
+footer .right-footer .fa-phone {
+  background-color: green;
 }
 /*# sourceMappingURL=main.css.map */

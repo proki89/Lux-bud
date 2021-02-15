@@ -57,6 +57,17 @@ h2
     width: 20px
     border-radius: 50%
     background-color: #aaaaaa
+.slick-dots
+    li 
+        button:before
+            font-size: 10px
+.fa-bars:before
+    content: "\f0c9"
+    color: #fff
+    font-size: 26px
+.navbar-toggler
+    border: none
+
 .page-title
     color: #212121
     font-family: 'Roboto', sans-serif
@@ -83,8 +94,11 @@ nav
     .nav-link
         a
             color: #eeeeee
+
 nav .navbar-dark:hover, nav .navbar-dark:focus
     color: #eeeeee
+    
+
 header
     .header-wrapper
         margin: 0
@@ -122,10 +136,10 @@ header
             width: 100%
             position: absolute
             top: 20%
-            
+
             h1
                 text-shadow: 3px 3px 10px #212121
-                
+
             .under-title
                 text-shadow: 3px 3px 5px #212121
         i
@@ -151,13 +165,37 @@ header
     .header-right
         overflow: hidden
         position: relative
+        display: flex
+        flex-direction: column
         height: 100vh
-        background-color: #f8f9fa
+        background-image: url("../img/header-img2.jpg")
         z-index: 0
         margin-right: 0
         padding-right: 0
         padding-left: 0
         margin-left: 0
+        .rh-first
+            position: absolute
+            left: 5%
+            top: 5%
+            width: 90%
+            height: 25%
+            background-color: #fff
+        .rh-second
+            position: absolute
+            left: 5%
+            top: 30%
+            width: 90%
+            height: 45%
+            background-image: url(/img/header-img.img)
+        .rh-third
+            position: absolute
+            top: 80%
+            left: 5%
+            width: 90%
+            height: 15%
+            background-color: #aaa
+
         .header-content
             height: 75%
             .elo
@@ -170,6 +208,33 @@ header
                 height: 80%
                 background-color: #f8f9f8
                 z-index: 0
+                .header-desc
+                    position: absolute
+
+              
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    img
+                        top: 50%
+                        left: 50%
+                    p
+                        font-size: 20px
+                        color: #f8f9f0
+                        text-align: center
+                    .underline
+
+                        height: 1px
+                        width: 80%
+                        background-color: #fff
+                    .stars-container
+                        i
+                            font-size: 14px
+                            color: gold
+                    .quot
+                        font-family: 'Fredoka One', sans-serif
+                        font-size: 60px
                 ul
                     color: #ffffff
                     text-align: center
@@ -182,15 +247,15 @@ header
                         content: "\2714\0020"
                         color: gold
 
-                p
-                    position: absolute
-                    max-width: 90%
-                    color: #ffffff
-                    padding: 50px
-                    background: #ffffff09;
-                    box-shadow: 0 8px 32px 0 #a6a6aa11;
-                    backdrop-filter: blur( 4px );
-                    -webkit-backdrop-filter: blur( 4px );
+                // p
+                //     position: absolute
+                //     max-width: 90%
+                //     color: #ffffff
+                //     padding: 50px
+                //     background: #ffffff09;
+                //     box-shadow: 0 8px 32px 0 #a6a6aa11;
+                //     backdrop-filter: blur( 4px );
+                //     -webkit-backdrop-filter: blur( 4px );
                     // border-radius: 10px;
                 .quote
                     i
@@ -314,13 +379,14 @@ header
                 -webkit-transform: translate(-50%, 0)
                 transform: translate(-50%, 0)
         img
-            top: 20%
+            top: 0%
             left: 50%
-            -webkit-transform: translate(-50%, -50%)
-            transform: translate(-50%, -50%)
+            margin: 0 5%
+            // -webkit-transform: translate(-50%, -50%)
+            // transform: translate(-50%, -50%)
             height: 150px
             width: 150px
-            border-radius: 50%
+
         p
             font-size: 18px
             color: #4a4a4a
@@ -448,7 +514,7 @@ header
             text-shadow: 0px 3px 10px black
             padding-bottom: 30px
 #about
-    background-color: #aaaaaa
+    background-color: #f8f9fa
     .jumbotron
         i
             color: gold
@@ -461,6 +527,12 @@ header
             &:hover
                 -webkit-transform: scale(1.4)
                 transform: scale(1.4)
+        .fa-star
+            color: gold
+            font-size: 10px
+            text-shadow: none
+            &:hover
+                transform: none
         h5
             color: #ffffff
             text-transform: uppercase
@@ -553,6 +625,101 @@ header
                 background-size: cover
                 background-repeat: no-repeat
                 z-index: 0
+    h3
+        color: #4a4a4a
+    
+    .testimonials-first
+        position: relative
+        height: 325px
+        width: 200px
+        background: #fff
+        text-align: center
+        padding: 30px 30px 50px
+        margin: 0 15px 100px
+        // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+    .testimonials-first:before
+        &:after
+            content: ''
+            border-top: 40px solid #fff
+            border-right: 125px solid transparent
+            position: absolute
+            bottom: -40px
+            left: 0
+    .testimonials-first:after
+        border-right: none
+        border-left: 125px solid transparent
+        left: auto
+        right: 0
+    .pierdolnik
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 100%
+        clip-path: polygon(50% 82%, 0% 100%, 100% 100%);
+        background-color: #f8f9fa
+
+    
+    .testimonials-first
+        .icon
+            display: inline-block
+            font-size: 80px
+            padding: 15px
+            border: 1px solid transparent
+            border-radius: 50%
+            background-color: #f8f9fa
+            color: #212529
+            margin-bottom: 20px
+            opacity: 0.5
+        .testimonials-text
+            font-size: 15px
+            color: #777
+            text-align: 
+            margin-bottom: 30px
+            opacity: 0.8
+        // .testimonials-content
+        //     width: 100%
+        //     position: absolute
+        //     left: 0
+        .testimonials-content
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            .pic
+
+                height: 50px
+                width: 50px
+                display: inline-block
+                background-color: #f8f9fa
+                border: 2px solid #fff
+                border-radius: 50%
+                box-shadow: 0 0 2px 2px #f8f9fa
+                overflow: hidden
+                z-index: 1
+            .letter
+                color: #aaa
+                line-height: 1.5
+                font-size: 30px
+                text-shadow: 0px 0px 0px 
+                
+            .remont-type
+                font-size: 13px
+                color: #5a5a5a
+            .badge
+                background-color: green
+                margin-left: 4px
+            
+        .test-title
+            font-size: 15px
+            letter-spacing: 1px
+            color: #4a4a4a
+            text-transform: capitalize
+            margin: 0 0 5px 0
+            padding-top: 5px
+
+        
+
     .info-pomiar
         h5
             color: #333333
@@ -583,7 +750,7 @@ header
             background-color: #e7f8ff
         img
             padding: 0
-           
+
 #gallery
     h2
         font-family: 'Roboto', sans-serif
@@ -666,11 +833,37 @@ header
         max-width: 100px
 footer
     color: #ffffff
+    .underline-footer
+        position: relative
+        margin: 0 auto 20px
+        // margin-top: 7px
+        height: 1px
+        width: 100px
+        background-color: gold
+        .underline-box
+            position: absolute
+            right: 0
+            height: 3px
+            width: 20px
+            background-color: gold
+
+    .fa-star:before
+        content: "\f005"
+        font-size: 10px
+        padding: 0 1px
+        color: #fdd600
+        text-shadow: 0px 0px 5px solid black
     h5
         color: #eeeeee
     .footer-desc
         background-color: #f8f9f8
         color: #333333
+    .nav-link
+        color: #f8f9fa
+        transition: color .3s
+        &:hover
+            color: gold
+
         p
             margin-bottom: 0
     .footer-hero
@@ -693,6 +886,7 @@ footer
         padding-right: 5px
         color: gold
     .left-element
+
         .text-content
             text-align: center
             font-size: 14px
@@ -701,7 +895,7 @@ footer
             top: 0
             -webkit-transform: translate(-50%, 0)
             transform: translate(-50%, 0)
-        i
+        .fa-facebook-square
             font-size: 30px
             padding: 10px
             color: #ffffff
@@ -713,6 +907,14 @@ footer
                 color: #eeeeee9d
                 -webkit-transform: rotate(360deg)
                 transform: rotate(360deg)
+    .right-footer
+        i
+            padding: 10px
+            border-radius: 50%
+        .fa-at
+            background-color: red
+        .fa-phone
+            background-color: green
     .footer-item
         // .tel-box
         //     position: absolute
@@ -727,10 +929,9 @@ footer
         //     -webkit-transform: translate(-50%, -50%)
         //     transform: translate(-50%, -50%)
 
-@media (min-width: 1370px)
-    #desc
-    .container-descripton
-        img
-            max-width: 100%
-            height: auto
-    
+// @media (min-width: 1370px)
+//     #desc
+//     .container-descripton
+//         img
+//             max-width: 100%
+//             height: auto

@@ -15,9 +15,6 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
     <link rel="stylesheet" href="css/animate.css">
     <link href="css/lightbox.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-        crossorigin="" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" media='screen and (min-width: 576px)' href="css/small.css">
     <link rel="stylesheet" media='screen and (min-width: 768px)' href="css/medium.css">
@@ -36,7 +33,7 @@
                         class="fas fa-paint-roller"></i></span></i>Lux-bud</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
@@ -54,9 +51,9 @@
     <header id="home">
 
         <div class="header-wrapper d-flex row">
-            <div class="header-left col-lg-6">
+            <div class="header-left col-lg-7">
                 <div class="hero-shadow"></div>
-
+                <div class="outside position-absolute top-50 start-100 translate-middle"></div>
                 <div class="left-text justify-content-center align-items-center visibility os-animation"
                     data-animation="fadeIn" data-delay=".3s">
                     <p class="text-center display-5 mb-0 os-animation" data-animation="fadeIn" data-delay=".3s"><i
@@ -77,67 +74,93 @@
 
                     </div>
                 </div>
-                <!-- <div class="header-bottom">
-                    
-                </div> -->
+               
             </div>
-            <div class="header-right col-lg-6 d-flex flex-column">
-                <div class="col-12 header-content d-flex flex-column">
-                    <div class="elo  d-flex justify-content-center align-items-center">
+            <div class="header-right col-lg-5 d-flex flex-column p-5 justify-content-center align-items-center">
+         
+                <form id="contact-form" method="post" action="contact.php" role="form">
+
+                    <div class="messages"></div>
+                
+                    <div class="controls">
+                
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_name">Firstname *</label>
+                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_lastname">Lastname *</label>
+                                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Email *</label>
+                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_need">Please specify your need *</label>
+                                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                                        <option value=""></option>
+                                        <option value="Request quotation">Request quotation</option>
+                                        <option value="Request order status">Request order status</option>
+                                        <option value="Request copy of an invoice">Request copy of an invoice</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="form_message">Message *</label>
+                                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-success btn-send" value="Send message">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="text-muted">
+                                    <strong>*</strong> These fields are required.</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                </form>
+
+
+
+
+
+                <!-- <div class="col-12 header-content d-flex flex-column">
+                    <div class="elo d-flex justify-content-center align-items-center">
                         <div class="shadow-header"></div>
+                        <div class="header-desc">
+                       
+                            
+                        </div>
+                  
                         
-                        <div class="quote wrapper">
-                            <!-- <i class="fas fa-quote-left left-quote"></i>
-                            <p class="text-center">Do rzeczy, na temat i w terminie, życzę dalszych sukcesów!!!</p>
-                            <i class="fas fa-quote-right right-quote"></i>
-                            <p class="text-center">Renata</p>
-                            <div class="star-rating d-flex justify-content-center">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="text-center pt-4">Remont mieszkania</p> -->
-
-                        </div>
                     </div>
-                    <div class="raz">
-                        <p class="text-center">Masz pytanie?</p>
-
-                    </div>
-                    <div class="dwa d-flex justify-content-center align-items-center">
-                        <p class="text-center os-animation" data-animation="flash" data-delay=".3s">Zadzwoń: 123 456 789
-                        </p>
-                    </div>
+                 
                 </div>
 
-                <!-- <div class="col-6 first position-relative">
-                    <div class="d-none d-md-block square-left position-absolute"></div>
-                   
-
-                    <h3 class="text-center position-absolute">O nas</h3>
-                    <p class="text-center position-absolute pt-3">Lux-Bud, to zespół doświadczonych fachowców,
-                        istniejący na
-                        rynku od 2010 roku. Zajmujemy się Działamy na terenie Lubina i okolic. Zaufały nam już setki
-                        zadowolonych
-                        klientów.</p>
-
-                </div>
-                <div class="col-6 second position-relative">
-
-                    <img src="img/img-top.jpg" alt="">
-                    <div class="down">
-                        <div class="contact text-center">
-                            <div class="box-contact">
-                                <p class="pt-2">Masz pytanie?</p>
-                                <p class="">Zadzwoń: 123 456 789</p>
-                            </div>
-                            <p class="pt-4">Napisz: luxbud@bluxbud.pl</p>
-                        </div>
-                    </div>
-
-                </div> -->
                 <div class="col-12 position-relative down-right">
                     <div class="first-down">
                         <i class="fas fa-home"></i>
@@ -150,75 +173,13 @@
                     <div class="third-down"><i class="fas fa-toolbox"></i>
                         <p class="text-center pt-2">Montaż</p>
                     </div>
-                </div>
+                </div> -->
 
 
             </div>
 
 
 
-            <!-- <div class="rating-container">
-
-
-                        <div class="rating-hero">
-                            <div class="second-shadow"></div>
-
-                            <div class="top-left">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam neque necessitatibus
-                                veritatis earum adipisci consequuntur id assumenda possimus eligendi aliquam. Et dolorum
-                                consequuntur quibusdam quisquam amet assumenda similique molestias omnis.</p>
-
-
-                            <div class="top-right justify-content-end align-items-end">
-                                <i class="fas fa-quote-right"></i>
-                            </div>
-                        </div>
-
-
-
-
-                    </div> -->
-
-
-
-            <!-- <div class="justify-content-center align-items-center">
-                        <p class="text-center display-6"><i class="fas fa-tools"></i></p>
-                        <p
-                            class="d-flex justify-content-center align-items-center text-uppercase display-6 text-center under-title wrapper">
-                            Świadczymy usługi z zakresu prac wykończeniowych, remontowych i budowlanych na terenie Lubina i okolic</p>
-                            <div class="d-grid gap-2 col-3 mx-auto pt-5">
-                                <button class="btn btn-primary" type="button">Dowiedz się więcej</button>
-                                
-                              </div>
-
-                    </div> -->
-            <!-- <div class="col-sm-4">
-                        <p class="text-center"><i class="fas fa-hat-wizard    "></i></p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde cum repellat laboriosam! Quisquam sed eum itaque perspiciatis beatae officia dolorum voluptatum molestias tempora odio nisi debitis in, qui deserunt.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p class="text-center"><i class="fas fa-hat-wizard    "></i></p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde cum repellat laboriosam! Quisquam sed eum itaque perspiciatis beatae officia dolorum voluptatum molestias tempora odio nisi debitis in, qui deserunt.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p class="text-center"><i class="fas fa-hat-wizard    "></i></p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatem dolorum ad tempora adipisci quisquam amet soluta eum fugit ipsum iure eligendi error quis commodi natus, ea aperiam, quaerat incidunt.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p class="text-center"><i class="fas fa-hat-wizard    "></i></p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatem dolorum ad tempora adipisci quisquam amet soluta eum fugit ipsum iure eligendi error quis commodi natus, ea aperiam, quaerat incidunt.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p class="text-center"><i class="fas fa-hat-wizard    "></i></p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatem dolorum ad tempora adipisci quisquam amet soluta eum fugit ipsum iure eligendi error quis commodi natus, ea aperiam, quaerat incidunt.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p class="text-center"><i class="fas fa-hat-wizard    "></i></p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatem dolorum ad tempora adipisci quisquam amet soluta eum fugit ipsum iure eligendi error quis commodi natus, ea aperiam, quaerat incidunt.</p>
-                    </div> -->
         </div>
 
 
@@ -261,16 +222,146 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-2 pb-3 pb-md-0 visibility os-animation"
                         data-animation="bounceIn" data-delay="1s">
-                        <p class="text-center"><i class="fas fa-phone"></i></p>
-                        <h5 class="text-center">Kontakt</h5>
-                        <p class="text-center about-desc">Zależy nam na realizacji prac zgodnie z oczekiwaniami naszych
-                            klientów, więc jesteśmy z nimi zawsze w kontakcie.</p>
+                        <p class="text-center"><i class="fas fa-piggy-bank"></i></p>
+                        <h5 class="text-center">Niskie ceny</h5>
+                        <p class="text-center about-desc">Nie chcesz wydawać fortuny na remont? Z nami zaoszczędzisz swój czas i pieniądze. Zadzwoń do nas i przedstaw swój projekt. Wycenimy go bezpłatnie!</p>
                     </div>
 
                 </div>
 
 
 
+            </div>
+
+            <div class="container container-fluid about-testimonials wrapper">
+                <h3 class="text-center mt-4">Opinie klientów</h3>
+                <div class="testimonials row responsive pt-5">
+                    
+                    <div class="testimonials-first">
+<span class="icon fas fa-quote-left"></span>
+<p class="testimonials-text">Do rzeczy, na temat i w terminie, życzę dalszych sukcesów!!!
+</p>
+<div class="pierdolnik"></div>
+<div class="testimonials-content position-absolute top-100 start-50 translate-middle pt-4">
+    <div class="pic">
+<span class="letter">R</span>
+    </div>
+    <h3 class="test-title">Renata</h3>
+    <span class="remont-type">Remont mieszkania<span class="badge" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Instalacja wodna + układanie płytek">+2</span></span>
+    <div class="stars-container text-center pt-0 pb-4">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+</div>
+                    </div>
+                    <div class="testimonials-first">
+<span class="icon fas fa-quote-left"></span>
+<p class="testimonials-text">Rewelacja profesjonalnie dokładnie. Jestem bardzo zadowolony
+</p>
+<div class="pierdolnik"></div>
+<div class="testimonials-content position-absolute top-100 start-50 translate-middle pt-4">
+    <div class="pic">
+<span class="letter">P</span>
+    </div>
+    <h3 class="test-title">Paweł</h3>
+    <span class="remont-type">Remont mieszkania<span class="badge" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Układanie płytek">+1</span></span>
+    <div class="stars-container text-center pt-0 pb-4">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+</div>
+                    </div>
+                    <div class="testimonials-first">
+<span class="icon fas fa-quote-left"></span>
+<p class="testimonials-text">Bardzo dokładny fachowiec👌 Bardzo polecam.
+</p>
+<div class="pierdolnik"></div>
+<div class="testimonials-content position-absolute top-100 start-50 translate-middle pt-4">
+    <div class="pic">
+<span class="letter">G</span>
+    </div>
+    <h3 class="test-title">Grzegorz</h3>
+    <span class="remont-type">Remont mieszkania<span class="badge" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Zabudowa kominka">+1</span></span>
+    <div class="stars-container text-center pt-0 pb-4">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+</div>
+                    </div>
+                    <div class="testimonials-first">
+<span class="icon fas fa-quote-left"></span>
+<p class="testimonials-text">Bardzo dobra współpraca. Wykonawca solidny, dokładny i wywiązujący się terminowo ze zleceń oraz atrakcyjna cena za usługi. Polecam
+</p>
+<div class="pierdolnik"></div>
+<div class="testimonials-content position-absolute top-100 start-50 translate-middle pt-4">
+    <div class="pic">
+<span class="letter">M</span>
+    </div>
+    <h3 class="test-title">Marta</h3>
+    <span class="remont-type">Elewacja domu<span class="badge" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Remont mieszkania + układanie płytek">+2</span></span>
+    <div class="stars-container text-center pt-0 pb-4">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+</div>
+                    </div>
+                    <div class="testimonials-first">
+<span class="icon fas fa-quote-left"></span>
+<p class="testimonials-text">Szybki, perfekcjonista, konkretny gość, zna się na rzeczy polecam
+</p>
+<div class="pierdolnik"></div>
+<div class="testimonials-content position-absolute top-100 start-50 translate-middle pt-4">
+    <div class="pic">
+<span class="letter">A</span>
+    </div>
+    <h3 class="test-title">Artur</h3>
+    <span class="remont-type">Remont mieszkania<span class="badge" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Układanie płytek + montaż sufitu podwieszanego">+2</span></span>
+    <div class="stars-container text-center pt-0 pb-4">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+</div>
+                    </div>
+                    <div class="testimonials-first">
+<span class="icon fas fa-quote-left"></span>
+<p class="testimonials-text">Pełen profesjonalizm, mieszkanie wykończone w terminie od A do Z. Szczerze polecam!
+</p>
+<div class="pierdolnik"></div>
+<div class="testimonials-content position-absolute top-100 start-50 translate-middle pt-4">
+    <div class="pic">
+<span class="letter">Ł</span>
+    </div>
+    <h3 class="test-title">Łukasz</h3>
+    <span class="remont-type">Remont mieszkania </span>
+    <div class="stars-container text-center pt-0 pb-4">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+</div>
+                    </div>
+                    
+
+                    
+                    </div>
+                </div>
             </div>
             <!-- ZAKRES PRAC 
             <h1 class="text-center pt-4 page-title">ZAKRES PRAC</h1>
@@ -791,24 +882,51 @@
         <div class="footer-hero">
 
             <p class="footer-title pt-4"><span class="icon-logo"><i class="fas fa-paint-roller"></i></span>lux-bud</p>
-            <div class="footer-container d-flex row justify-content-lg-around wrapper pt-4">
-                <div class="col-sm-6 footer-item d-flex justify-content-center row">
-                    <div class="col-6 right-element text-center pb-4">
-                        <p class="">Nawigacja</p>
+            <div class="footer-container d-flex justify-content-lg-around pt-4">
+                <div class="footer-item d-flex row justify-content-center g-0">
+                    <div class="order-2 order-lg-0 col-sm-12 col-md-4 right-element text-center pb-4">
+                        <div class="title-footer">
+                            <p class="mb-2">Nawigacja</p>
+                            <div class="underline-footer justify-content-center">
+                                <div class="underline-box"></div>
+                            </div>
+                        </div>
+
                         <a class="nav-link" aria-current="page" href="#">Home</a>
                         <a class="nav-link" href="#about">O nas</a>
                         <a class="nav-link" href="#gallery">Realizacje</a>
                         <a class="nav-link" href="#">Kontakt</a>
                     </div>
-                    <div class="col-6 left-element d-flex justify-content-center row">
-                        <p class="text-content">Lux-Bud, to zespół doświadczonych fachowców,
+                    <div class="order-1 col-sm-6 col-md-4 left-element d-flex justify-content-center row">
+                        <p class="text-content mb-0">Lux-Bud, to zespół doświadczonych fachowców,
                             istniejący na
                             rynku od 2010 roku. Zajmujemy się Działamy na terenie Lubina i okolic. Zaufały nam już setki
                             zadowolonych
                             klientów.</p>
-                        <p class="text-center text-white-50">Social Media</p>
+                        <div class="stars-container text-center pt-0 pb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-center text-white-50 mb-0 pt-2">Social Media</p>
                         <p class="text-center"><a href="https://facebook.com" target="_blank"><i
-                                    class="fa fa-facebook-square" aria-hidden="true"></i></a></p>
+                                    class="fa fa-facebook-square pb-4" aria-hidden="true"></i></a></p>
+                    </div>
+                    <div class="order-0 order-lg-2 col-sm-6 col-md-4 right-footer d-flex row justify-content-center pb-4">
+                        <div class="title-footer">
+                            <p class="text-center mb-2">Kontakt</p>
+                            <div class="underline-footer">
+                                <div class="underline-box"></div>
+                            </div>
+                        </div>
+
+                        <p class="text-center"><i class="fas fa-phone"></i> Telefon: 123 456 789</p>
+                        <p class="text-center">
+                            <i class="fas fa-at"></i> E-mail: 
+                            kontakt@lubinremonty.pl
+                        </p>
                     </div>
                 </div>
                 <!-- <div class="col-12 col-sm-6 footer-item">
@@ -844,6 +962,8 @@
     <script src="js/animation.js"></script>
     <script src="js/jquery.waypoints.min"></script>
     <script src="js/lightbox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+        <script src="js/contact.js"></script>
     <script src="js/main.js"></script>
 
 </body>

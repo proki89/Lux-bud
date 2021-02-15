@@ -33,7 +33,7 @@ $('.responsive').slick({
     slidesToScroll: 4,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -42,14 +42,14 @@ $('.responsive').slick({
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 880,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -174,6 +174,10 @@ function shakeIt() {
 };
 document.addEventListener('click', shakeIt)
 
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 
 $('.slick-gal').slick({
   dots: true,
