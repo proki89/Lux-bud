@@ -78,8 +78,51 @@
             </div>
             <div class="header-right col-lg-5 d-flex flex-column p-5 justify-content-center align-items-center">
 
+
+
+                <div class="top-content">
+        	
+                    <div class="inner-bg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="form-box col-12">
+                                    <div class="form-top">
+                                        <h4 class="">Skontaktuj się z nami!</h4>
+                                        <p class="form-desc">Proszę wypełnij poniższy formularz, aby wysłać nam wiadomość</>
+                                    </div>
+                                    <div class="form-bottom contact-form">
+                                        <form role="form" action="contact.php" method="post">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="contact-email">Email</label>
+                                                <input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
+                                            </div>
+                                            <div class="form-group py-4">
+                                                <label class="sr-only" for="contact-subject">Numer telefonu</label>
+                                                <input type="text" name="subject" placeholder="Tutaj wpisz numer telefonu" class="contact-subject form-control" id="contact-subject">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="contact-message">Wiadomość</label>
+                                                <textarea name="message" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="py-2" form="contact-antispam">Zabezpieczenie anty-spam: 7 + 5 = ?</label>
+                                                <input type="text" name="antispam" placeholder="Your answer..." class="contact-antispam form-control" id="contact-antispam">
+                                            </div>
+                                            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                                            <button type="submit" class="btn btn-success p-2">Wyślij wiadomość</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
                 
-<form action="mail.php" method="POST">
+<!-- <form action="mail.php" method="POST">
     <p>Imię i nazwisko</p> <input type="text" name="name">
     <p>Email</p> <input type="text" name="email">
     <p>Telefon</p> <input type="text" name="phone">
@@ -88,6 +131,7 @@
     <input class="btn btn-success" type="submit" value="Wyślij"><input class="btn btn-primary" type="reset" value="Wymaż">
     </form>
     
+     -->
     
 
 
@@ -967,6 +1011,7 @@
     <script src="js/lightbox.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
         <script src="js/contact.js"></script>
+        <script src="js/scripts.js"></script>
     <script src="js/main.js"></script>
 
 </body>

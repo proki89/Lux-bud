@@ -233,11 +233,34 @@ header .header-right {
           flex-direction: column;
   height: 100vh;
   background-image: url("../img/header-img2.jpg");
+  background-color: #293241;
+  color: #f8f9f0;
   z-index: 0;
   margin-right: 0;
   padding-right: 0;
   padding-left: 0;
   margin-left: 0;
+}
+
+header .header-right h4 {
+  color: #fde50f;
+}
+
+header .header-right .form-desc {
+  font-size: 16px;
+  color: #f8f9f0;
+}
+
+header .header-right .btn {
+  background-color: transparent;
+  border: 2px solid gold;
+  border-radius: 800px;
+  color: gold;
+}
+
+header .header-right .btn:hover {
+  background-color: gold;
+  color: #333;
 }
 
 header .header-right .rh-first {
@@ -886,7 +909,7 @@ header .right-text i {
 
 #about .testimonials-first .icon {
   display: inline-block;
-  font-size: 80px;
+  font-size: 40px;
   padding: 15px;
   border: 1px solid transparent;
   border-radius: 50%;
