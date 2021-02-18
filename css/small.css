@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=small.css.map */
+.slick-next {
+  right: -25px;
+}
+
+.slick-prev {
+  left: -25px;
+}
+/*# sourceMappingURL=small.css.map */

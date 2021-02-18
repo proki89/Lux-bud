@@ -55,6 +55,14 @@ h2 {
   z-index: -10;
 }
 
+.slick-next {
+  right: -5px;
+}
+
+.slick-prev {
+  left: -5px;
+}
+
 #talkbubble {
   width: 120px;
   height: 80px;
@@ -232,7 +240,9 @@ header .header-right {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100vh;
-  background-image: url("../img/header-img2.jpg");
+  background-image: url("../img/img-top.jpg");
+  background-size: cover;
+  background-position: center center;
   background-color: #293241;
   color: #f8f9f0;
   z-index: 0;

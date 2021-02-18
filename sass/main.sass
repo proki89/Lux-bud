@@ -35,6 +35,10 @@ h2
     height: 100%
     background-color: rgba(0, 0, 0, 0.8)
     z-index: -10
+.slick-next
+    right: -5px
+.slick-prev
+    left: -5px
 #talkbubble
     width: 120px
     height: 80px
@@ -58,7 +62,7 @@ h2
     border-radius: 50%
     background-color: #aaaaaa
 .slick-dots
-    li 
+    li
         button:before
             font-size: 10px
 .fa-bars:before
@@ -97,7 +101,6 @@ nav
 
 nav .navbar-dark:hover, nav .navbar-dark:focus
     color: #eeeeee
-    
 
 header
     .header-wrapper
@@ -168,7 +171,9 @@ header
         display: flex
         flex-direction: column
         height: 100vh
-        background-image: url("../img/header-img2.jpg")
+        background-image: url("../img/img-top.jpg")
+        background-size: cover
+        background-position: center center
         background-color: #293241
         color: #f8f9f0
         z-index: 0
@@ -227,7 +232,6 @@ header
                 .header-desc
                     position: absolute
 
-              
                     display: flex
                     flex-direction: column
                     justify-content: center
@@ -643,7 +647,7 @@ header
                 z-index: 0
     h3
         color: #4a4a4a
-    
+
     .testimonials-first
         position: relative
         height: 325px
@@ -672,10 +676,9 @@ header
         left: 0
         width: 100%
         height: 100%
-        clip-path: polygon(50% 82%, 0% 100%, 100% 100%);
+        clip-path: polygon(50% 82%, 0% 100%, 100% 100%)
         background-color: #f8f9fa
 
-    
     .testimonials-first
         .icon
             display: inline-block
@@ -690,7 +693,7 @@ header
         .testimonials-text
             font-size: 15px
             color: #777
-            text-align: 
+            text-align:
             margin-bottom: 30px
             opacity: 0.8
         // .testimonials-content
@@ -717,15 +720,15 @@ header
                 color: #aaa
                 line-height: 1.5
                 font-size: 30px
-                text-shadow: 0px 0px 0px 
-                
+                text-shadow: 0px 0px 0px
+
             .remont-type
                 font-size: 13px
                 color: #5a5a5a
             .badge
                 background-color: green
                 margin-left: 4px
-            
+
         .test-title
             font-size: 15px
             letter-spacing: 1px
@@ -733,8 +736,6 @@ header
             text-transform: capitalize
             margin: 0 0 5px 0
             padding-top: 5px
-
-        
 
     .info-pomiar
         h5
