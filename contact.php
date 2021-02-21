@@ -27,12 +27,12 @@ if($_POST) {
         $array['messageMessage'] = 'Empty message!';
     }
     if($antispam != '12') {
-    	$array['antispamMessage'] = 'Wrong antispam answer!';
+    	$array['antispamMessage'] = 'Zła odpowiedź!';
     }
     if(isEmail($clientEmail) && $subject != '' && $message != '' && $antispam == '12') {
         // Send email
-		$headers = "From: " . $clientEmail . " <" . $clientEmail . ">" . "\r\n" . "Reply-To: " . $clientEmail;
-		mail($emailTo, $subject . " (bootstrap contact form tutorial)", $message, $headers);
+		$headers = "Oc: " . $clientEmail . " <" . $clientEmail . ">" . "\r\n" . "Odpowiedz do: " . $clientEmail;
+		mail($emailTo, $subject . " (Pytanie z formularza kontaktowego)", $message, $headers);
     }
 
     echo json_encode($array);

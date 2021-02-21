@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -53,14 +54,6 @@ h2 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: -10;
-}
-
-.slick-next {
-  right: -5px;
-}
-
-.slick-prev {
-  left: -5px;
 }
 
 #talkbubble {
@@ -728,6 +721,26 @@ header .right-text i {
   background-color: #f8f9fa;
 }
 
+#about .slick-next {
+  right: -5px;
+  color: black;
+}
+
+#about .slick-next:before {
+  content: '→';
+  color: #4a4a4a;
+}
+
+#about .slick-prev {
+  left: -5px;
+  color: black;
+}
+
+#about .slick-prev:before {
+  content: '←';
+  color: #4a4a4a;
+}
+
 #about .jumbotron i {
   color: gold;
   font-size: 30px;
@@ -1252,10 +1265,17 @@ footer .right-footer i {
 }
 
 footer .right-footer .fa-at {
-  background-color: red;
+  background-color: #c1342e;
 }
 
 footer .right-footer .fa-phone {
-  background-color: green;
+  background-color: #4aa551;
+}
+
+footer .copy {
+  padding-bottom: 5px;
+  margin-bottom: 0;
+  font-size: 14px;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

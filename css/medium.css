@@ -1,1 +1,19 @@
-/* No CSS *//*# sourceMappingURL=medium.css.map */
+@charset "UTF-8";
+#about .slick-next {
+  right: -20px;
+}
+
+#about .slick-next:before {
+  content: '→';
+  color: #4a4a4a;
+}
+
+#about .slick-prev {
+  left: -20px;
+}
+
+#about .slick-prev:before {
+  content: '←';
+  color: #4a4a4a;
+}
+/*# sourceMappingURL=medium.css.map */

@@ -35,10 +35,7 @@ h2
     height: 100%
     background-color: rgba(0, 0, 0, 0.8)
     z-index: -10
-.slick-next
-    right: -5px
-.slick-prev
-    left: -5px
+
 #talkbubble
     width: 120px
     height: 80px
@@ -535,6 +532,21 @@ header
             padding-bottom: 30px
 #about
     background-color: #f8f9fa
+    // background-image: url('/img/about-hero2.jpg')
+    // background-size: cover
+    .slick-next
+        right: -5px
+        color: black
+    .slick-next:before
+        content: '→'
+        color: #4a4a4a
+    .slick-prev
+        left: -5px
+        color: black
+    .slick-prev:before
+        content: '←'
+        color: #4a4a4a
+    
     .jumbotron
         i
             color: gold
@@ -650,13 +662,15 @@ header
 
     .testimonials-first
         position: relative
+        
+
         height: 325px
         width: 200px
         background: #fff
         text-align: center
         padding: 30px 30px 50px
         margin: 0 15px 100px
-        // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        // box-shadow: rgba(99, 99, 99, 0.2) 0px 3px 0px 0px
     .testimonials-first:before
         &:after
             content: ''
@@ -929,26 +943,11 @@ footer
             padding: 10px
             border-radius: 50%
         .fa-at
-            background-color: red
+            background-color: #c1342e
         .fa-phone
-            background-color: green
-    .footer-item
-        // .tel-box
-        //     position: absolute
-        //     top: 25%
-        //     left: 50%
-        //     -webkit-transform: translate(-50%, -50%)
-        //     transform: translate(-50%, -50%)
-        // .mail-box
-        //     position: absolute
-        //     top: 45%
-        //     left: 50%
-        //     -webkit-transform: translate(-50%, -50%)
-        //     transform: translate(-50%, -50%)
-
-// @media (min-width: 1370px)
-//     #desc
-//     .container-descripton
-//         img
-//             max-width: 100%
-//             height: auto
+            background-color: #4aa551
+    .copy
+        padding-bottom: 5px
+        margin-bottom: 0
+        font-size: 14px
+        text-align: center

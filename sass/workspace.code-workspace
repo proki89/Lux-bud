@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../../Downloads/bootstrap-contact-form-tutorial/assets/ico"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "folder bez nazwy",
+		"git.ignoreLimitWarning": true
+	}
+}
